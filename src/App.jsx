@@ -1,6 +1,6 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import UpiPayment from "./UpiPayment";
-import Home from "./pages/Home";
+import Home from "./pages/home";
 import JoinOurMission from "./component/JoinOurMission";
 
 function App() {
