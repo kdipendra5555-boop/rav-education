@@ -53,18 +53,7 @@ export default function UpiPayment() {
             UPI ID: <span className="font-medium">{UPI_ID}</span>
           </p>
 
-          {/* Fixed Amount Buttons */}
-          <div className="grid grid-cols-4 gap-2 mb-4">
-            {[10, 20, 30, 50, 100, 300, 500, 1000].map((amt) => (
-              <button
-                key={amt}
-                onClick={() => handlePay(amt)}
-                className="bg-blue-700 text-white rounded-lg py-2 text-sm font-semibold hover:bg-blue-800 transition"
-              >
-                ₹{amt}
-              </button>
-            ))}
-          </div>
+        
 
           {/* Custom Amount */}
           <input
@@ -75,13 +64,7 @@ export default function UpiPayment() {
             className="w-full border rounded-lg px-3 py-2 mb-3 focus:outline-none focus:ring-2 focus:ring-emerald-500"
           />
 
-          {/* Donate Button */}
-          <button
-            onClick={() => handlePay(amount)}
-            className="w-full bg-emerald-600 text-white py-3 rounded-xl font-semibold hover:bg-emerald-700 transition"
-          >
-            Donate {amount ? `₹${amount}` : ""}
-          </button>
+         
 
           {/* Volunteer Note */}
           <p className="text-xs text-gray-500 mt-5 leading-relaxed">
