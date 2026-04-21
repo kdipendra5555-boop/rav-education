@@ -1,0 +1,138 @@
+🎓 🧾 ULTRA DETAILED SCHOOL FORM (FULL STRUCTURE)
+👶 1. Student Basic Details
+Full Name (as per documents)
+Nickname
+Gender
+Date of Birth
+Age (auto calculated)
+Blood Group
+Aadhaar Number
+Religion
+Category (General / OBC / SC / ST)
+Nationality
+Mother Tongue
+Student Photo (upload)
+🏫 2. Admission Details
+Class Applying For
+Section Preference
+Admission Type (New / Transfer)
+Academic Year
+Stream (if higher classes)
+Medium (Hindi / English)
+Boarding Type (Day / Hostel)
+Transport Required (Yes/No)
+Route Selection (if transport yes)
+📚 3. Previous Academic Details
+Previous School Name
+School Address
+Board (CBSE / ICSE / State)
+Last Class Attended
+Percentage / Grade
+Year of Passing
+Reason for Leaving
+TC Number
+TC Upload
+👨‍👩‍👧 4. Parent / Guardian Details
+👨 Father
+Full Name
+Qualification
+Occupation
+Company Name
+Annual Income
+Mobile Number
+Alternate Number
+Email
+Aadhaar Number
+👩 Mother
+Full Name
+Qualification
+Occupation
+Company Name
+Annual Income
+Mobile Number
+Alternate Number
+Email
+Aadhaar Number
+👤 Guardian (if applicable)
+Name
+Relation
+Mobile
+Address
+📍 5. Address Details
+Permanent Address
+Address Line
+City
+District
+State
+Pincode
+Current Address
+Same as permanent (checkbox)
+Address Line
+City
+State
+Pincode
+📞 6. Contact & Communication
+Primary Contact Number
+Secondary Contact Number
+WhatsApp Number
+Email Address
+Preferred Language for Communication
+🏥 7. Medical Details
+Any Chronic Disease
+Allergies
+Disability (Yes/No + details)
+Blood Group
+Doctor Name
+Doctor Contact
+Emergency Contact Name
+Emergency Contact Number
+🧠 8. Student Profile
+Hobbies
+Interests
+Sports
+Achievements
+Skills (coding, art, music etc.)
+Strengths
+Weaknesses
+🚌 9. Transport Details
+Transport Required (Yes/No)
+Pickup Location
+Drop Location
+Distance from School
+Bus Route Number
+🏠 10. Hostel Details (if applicable)
+Hostel Required
+Room Preference
+Emergency Guardian
+💻 11. Digital / Smart School Info (🔥 TERA USP)
+Has Personal Device (Yes/No)
+Internet Access at Home
+Familiar with Computer (Yes/No)
+Coding Experience (Yes/No)
+Preferred Learning Style (Video / Practical / Theory)
+📄 12. Documents Upload
+Birth Certificate
+Aadhaar Card
+Passport Size Photo
+Previous Marksheet
+Transfer Certificate
+Income Certificate
+Caste Certificate (if applicable)
+💳 13. Fee & Payment
+Admission Fee
+Payment Mode (Cash / UPI / Card)
+Transaction ID
+Payment Screenshot Upload
+🔐 14. Account Creation (🔥 SMART FEATURE)
+Username
+Password
+Confirm Password
+📜 15. Declaration
+Checkbox: All details are correct
+Parent Signature (upload/draw)
+Date
+🧾 16. Admin Use (hidden)
+Admission ID
+Enrollment Number
+Approved / Pending
+Remarks

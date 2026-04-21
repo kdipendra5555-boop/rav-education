@@ -25,12 +25,23 @@ export default function Navbar() {
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-6">
+
+          {/* 🟢 SMART SCHOOL */}
+          <NavLink
+            to="/smart-school"
+            className="bg-green-600 text-white px-5 py-2 rounded-xl hover:bg-green-700 transition font-semibold"
+          >
+            Smart School
+          </NavLink>
+
+          {/* 🔵 DONATE */}
           <NavLink
             to="/pay"
             className="ml-4 bg-blue-700 text-white px-5 py-2 rounded-xl hover:bg-blue-800 transition font-semibold"
           >
             Donate
           </NavLink>
+
         </nav>
 
         {/* Mobile Menu Button */}
@@ -66,6 +77,17 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden bg-white border-t shadow">
           <nav className="flex flex-col px-4 py-4 gap-3">
+
+            {/* 🟢 SMART SCHOOL */}
+            <NavLink
+              onClick={() => setOpen(false)}
+              to="/smart-school"
+              className="bg-green-600 text-white px-4 py-2 rounded-xl text-center font-semibold"
+            >
+              Smart School
+            </NavLink>
+
+            {/* 🔵 DONATE */}
             <NavLink
               onClick={() => setOpen(false)}
               to="/pay"
@@ -73,6 +95,7 @@ export default function Navbar() {
             >
               Donate
             </NavLink>
+
           </nav>
         </div>
       )}
