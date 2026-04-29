@@ -37,64 +37,64 @@ const features = [
   },
 ];
 
-// 👇 grouping
 const groupedFeatures = chunkArray(features, 3);
 
 export default function SmartFeatures() {
   return (
     <section className="w-full bg-[#0b0b0b]">
 
-      <div className="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-10">
+      <div className="max-w-7xl mx-auto px-4 md:px-6 grid md:grid-cols-2 gap-10">
 
-        {/* LEFT SIDE (Sticky) */}
-        <div className="sticky top-0 h-[80vh] md:h-screen flex flex-col justify-center items-center md:items-start text-center md:text-left">
+        {/* LEFT SIDE */}
+        <div className="relative md:sticky top-0 h-auto md:h-screen flex flex-col justify-center items-center md:items-start text-center md:text-left py-16 md:py-0">
 
-          <div className="absolute w-72 h-72 bg-blue-500/20 blur-3xl rounded-full" />
+          <div className="absolute w-56 h-56 md:w-72 md:h-72 bg-blue-500/20 blur-3xl rounded-full" />
 
-          <div className="relative z-10 w-20 h-20 md:w-24 md:h-24 flex items-center justify-center rounded-2xl bg-blue-500/10 text-blue-400 shadow-[0_0_40px_rgba(37,99,235,0.6)]">
-            <Monitor size={40} />
+          <div className="relative z-10 w-16 h-16 md:w-24 md:h-24 flex items-center justify-center rounded-2xl bg-blue-500/10 text-blue-400 shadow-[0_0_40px_rgba(37,99,235,0.6)]">
+            <Monitor size={32} className="md:w-10 md:h-10" />
           </div>
 
-          <h2 className="mt-8 text-3xl md:text-5xl font-semibold text-white leading-tight">
+          <h2 className="mt-6 md:mt-8 text-2xl md:text-5xl font-semibold text-white leading-tight">
             Smart Learning Desk
           </h2>
 
-          <p className="mt-4 text-gray-400 max-w-md text-base md:text-lg">
+          <p className="mt-3 md:mt-4 text-gray-400 max-w-md text-sm md:text-lg">
             A complete digital desk system designed to transform traditional classrooms into smart, interactive and future-ready learning spaces.
           </p>
         </div>
 
-        {/* RIGHT SIDE (Scroll Steps - grouped) */}
+        {/* RIGHT SIDE */}
         <div>
           {groupedFeatures.map((group, groupIndex) => (
-            <div key={groupIndex} className="h-[80vh] md:h-screen flex items-center">
-              
-              <div className="max-w-xl border-l border-white/10 pl-6 md:pl-10 flex flex-col gap-10">
+            <div
+              key={groupIndex}
+              className="min-h-[70vh] md:h-screen flex items-center"
+            >
+              <div className="max-w-xl border-l border-white/10 pl-4 md:pl-10 flex flex-col gap-8 md:gap-10">
 
                 {group.map((item, i) => (
                   <motion.div
                     key={i}
-                    initial={{ opacity: 0, y: 120 }}
+                    initial={{ opacity: 0, y: 80 }}
                     whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.7, delay: i * 0.2 }}
-                    viewport={{ amount: 0.5 }}
+                    transition={{ duration: 0.6, delay: i * 0.15 }}
+                    viewport={{ amount: 0.3 }}
                   >
-                    <span className="text-blue-400 text-sm tracking-widest">
+                    <span className="text-blue-400 text-xs md:text-sm tracking-widest">
                       0{groupIndex * 3 + i + 1}
                     </span>
 
-                    <h3 className="mt-2 text-2xl md:text-3xl font-semibold text-white">
+                    <h3 className="mt-1 md:mt-2 text-xl md:text-3xl font-semibold text-white">
                       {item.title}
                     </h3>
 
-                    <p className="mt-4 text-gray-400 text-base md:text-lg leading-relaxed">
+                    <p className="mt-2 md:mt-4 text-gray-400 text-sm md:text-lg leading-relaxed">
                       {item.desc}
                     </p>
                   </motion.div>
                 ))}
 
               </div>
-
             </div>
           ))}
         </div>

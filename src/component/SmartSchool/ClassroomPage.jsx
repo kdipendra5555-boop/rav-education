@@ -2,36 +2,31 @@ import { motion } from "framer-motion";
 import { Monitor, Cpu, Wifi, Sparkles, BookOpen, LayoutGrid } from "lucide-react";
 import Navbar from "../SmartSchool/Navbar";
 
-
 export default function ClassroomPage() {
     return (
+        <div className="bg-[#050505] text-white pt-20 md:pt-24 overflow-hidden">
 
-
-        <div className="bg-[#050505] text-white pt-24 overflow-hidden">
-
-        
-           <Navbar/>
+            <Navbar/>
 
             {/* 🔥 HERO */}
-            <section className="py-44 text-center px-6 relative">
+            <section className="py-24 md:py-44 text-center px-4 md:px-6 relative">
 
-                {/* Glow */}
-                <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[700px] h-[700px] bg-blue-500/20 blur-[140px] rounded-full" />
+                <div className="absolute top-[-120px] left-1/2 -translate-x-1/2 w-[300px] h-[300px] md:w-[700px] md:h-[700px] bg-blue-500/20 blur-[100px] md:blur-[140px] rounded-full" />
 
                 <motion.h1
                     initial={{ opacity: 0, y: 60 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8 }}
-                    className="text-8xl md:text-[150px] font-semibold leading-[1.02] tracking-tight"
+                    className="text-5xl sm:text-6xl md:text-[150px] font-semibold leading-[1.1] md:leading-[1.02] tracking-tight"
                 >
-                    Modern Classroom
+                    Modern <br className="block md:hidden" /> Classroom
                 </motion.h1>
 
                 <motion.p
                     initial={{ opacity: 0, y: 40 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.2 }}
-                    className="mt-12 text-gray-400 text-2xl md:text-3xl max-w-3xl mx-auto leading-relaxed"
+                    className="mt-6 md:mt-12 text-gray-400 text-base sm:text-lg md:text-3xl max-w-xl md:max-w-3xl mx-auto leading-relaxed"
                 >
                     Designed for focus, powered by technology and built for the future.
                 </motion.p>
@@ -39,8 +34,8 @@ export default function ClassroomPage() {
             </section>
 
             {/* 🖥️ MAIN VISUAL + CONTENT */}
-            <section className="py-32 px-6">
-                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-24 items-center">
+            <section className="py-20 md:py-32 px-4 md:px-6">
+                <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 md:gap-24 items-center">
 
                     {/* LEFT VISUAL */}
                     <motion.div
@@ -58,10 +53,13 @@ export default function ClassroomPage() {
                             className="absolute inset-0 bg-blue-500/20 blur-3xl rounded-3xl"
                         />
 
-                        <div className="relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden p-12 flex items-center justify-center h-[450px] shadow-[0_0_60px_rgba(59,130,246,0.2)]">
-                            <span className="text-gray-500 text-lg">
-                                Smart Classroom Are In Construction Phase
-                            </span>
+                        {/* ✅ IMAGE */}
+                        <div className="relative rounded-3xl border border-white/10 bg-white/5 backdrop-blur-xl overflow-hidden h-[260px] md:h-[450px] shadow-[0_0_60px_rgba(59,130,246,0.2)]">
+                            <img
+                                src="https://t3.ftcdn.net/jpg/10/88/26/38/360_F_1088263827_8SVIf5jOMtrcM8qnIH4KuB0GI06UEdZz.jpg"
+                                alt="Smart Classroom"
+                                className="w-full h-full object-cover"
+                            />
                         </div>
                     </motion.div>
 
@@ -71,17 +69,16 @@ export default function ClassroomPage() {
                         whileInView={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8 }}
                     >
-                        <h2 className="text-5xl font-semibold leading-tight">
+                        <h2 className="text-2xl md:text-5xl font-semibold leading-tight">
                             Built for Deep Focus
                         </h2>
 
-                        <p className="mt-6 text-gray-400 text-lg max-w-lg">
+                        <p className="mt-4 md:mt-6 text-gray-400 text-sm md:text-lg max-w-lg">
                             A distraction-free digital environment where students learn faster,
                             smarter and more effectively with modern tools.
                         </p>
 
-                        {/* FEATURES WITH ICONS */}
-                        <div className="mt-12 space-y-6">
+                        <div className="mt-8 md:mt-12 space-y-5 md:space-y-6">
 
                             {[
                                 { icon: Monitor, text: "Personal smart desk for every student" },
@@ -96,12 +93,14 @@ export default function ClassroomPage() {
                                         initial={{ opacity: 0, x: 40 }}
                                         whileInView={{ opacity: 1, x: 0 }}
                                         transition={{ delay: i * 0.1 }}
-                                        className="flex items-start gap-4"
+                                        className="flex items-start gap-3 md:gap-4"
                                     >
-                                        <div className="w-10 h-10 flex items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
-                                            <Icon size={18} />
+                                        <div className="w-9 h-9 md:w-10 md:h-10 flex items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
+                                            <Icon size={16} />
                                         </div>
-                                        <p className="text-gray-300">{item.text}</p>
+                                        <p className="text-gray-300 text-sm md:text-base">
+                                            {item.text}
+                                        </p>
                                     </motion.div>
                                 );
                             })}
@@ -113,15 +112,15 @@ export default function ClassroomPage() {
                 </div>
             </section>
 
-            {/* ⚡ FEATURES GRID WITH ICONS */}
-            <section className="py-40 px-6">
+            {/* ⚡ FEATURES GRID */}
+            <section className="py-24 md:py-40 px-4 md:px-6">
                 <div className="max-w-6xl mx-auto text-center">
 
-                    <h2 className="text-5xl font-semibold">
+                    <h2 className="text-2xl md:text-5xl font-semibold">
                         What Makes It Different
                     </h2>
 
-                    <div className="mt-24 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12">
+                    <div className="mt-12 md:mt-24 grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6 md:gap-12">
 
                         {[
                             { icon: LayoutGrid, text: "Individual Digital Workspace" },
@@ -143,13 +142,13 @@ export default function ClassroomPage() {
                                 >
                                     <div className="absolute inset-0 bg-blue-500/10 blur-2xl opacity-0 group-hover:opacity-100 transition rounded-2xl" />
 
-                                    <div className="relative bg-white/5 border border-white/10 rounded-2xl p-8 backdrop-blur-xl text-left">
+                                    <div className="relative bg-white/5 border border-white/10 rounded-xl md:rounded-2xl p-4 md:p-8 backdrop-blur-xl text-left">
 
-                                        <div className="w-12 h-12 mb-4 flex items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
-                                            <Icon size={20} />
+                                        <div className="w-10 h-10 md:w-12 md:h-12 mb-3 md:mb-4 flex items-center justify-center rounded-xl bg-blue-500/10 text-blue-400">
+                                            <Icon size={18} />
                                         </div>
 
-                                        <p className="text-gray-300">{item.text}</p>
+                                        <p className="text-gray-300 text-sm md:text-base">{item.text}</p>
                                     </div>
                                 </motion.div>
                             );
@@ -161,17 +160,17 @@ export default function ClassroomPage() {
             </section>
 
             {/* 🎯 STATEMENT */}
-            <section className="py-40 px-6 text-center relative">
+            <section className="py-24 md:py-40 px-4 md:px-6 text-center relative">
 
                 <div className="absolute inset-0 bg-gradient-to-r from-blue-500/10 via-transparent to-purple-500/10 blur-2xl" />
 
-                <div className="max-w-4xl mx-auto relative z-10">
+                <div className="max-w-3xl md:max-w-4xl mx-auto relative z-10">
 
-                    <h2 className="text-5xl md:text-7xl font-semibold leading-tight">
+                    <h2 className="text-3xl md:text-7xl font-semibold leading-tight">
                         A Better Way to Learn
                     </h2>
 
-                    <p className="mt-8 text-gray-400 text-xl">
+                    <p className="mt-4 md:mt-8 text-gray-400 text-base md:text-xl">
                         Students don’t just study — they create, explore and grow with modern tools.
                     </p>
 
