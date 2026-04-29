@@ -72,6 +72,8 @@ export default function BookVisit() {
                     </motion.div>
 
                     {/* RIGHT FORM */}
+
+                    
                     <motion.div
                         initial={{ opacity: 0, y: 80 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -173,6 +175,21 @@ export default function BookVisit() {
 
                 </div>
             </section>
+
+            {/* 🔔 BOTTOM NOTICE */}
+<div className="max-w-6xl mx-auto mt-16 px-6">
+    <div className="p-5 rounded-xl bg-yellow-500/10 border border-yellow-500/20 text-yellow-300 text-sm leading-relaxed text-center">
+        
+        <p className="font-semibold mb-2">Notice</p>
+
+        <p>
+            Currently, we are not accepting visit bookings as the school is still in its development phase. 
+            We appreciate your interest and request you to stay tuned for official updates. 
+            Thank you for your patience and support.
+        </p>
+
+    </div>
+</div>
 
             {/* INPUT STYLE */}
             <style jsx>{`
