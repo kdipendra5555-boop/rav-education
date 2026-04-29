@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import { Code, Cpu, BookOpen, Sparkles } from "lucide-react";
+import { useState } from "react";
 
 const features = [
     {
@@ -29,6 +30,9 @@ const features = [
 ];
 
 export default function FeatureShowcase() {
+
+    const [open, setOpen] = useState(false);
+
     return (
         <section className="relative py-20 md:py-32 px-4 md:px-6 bg-[#020617] overflow-hidden">
 
@@ -106,10 +110,36 @@ export default function FeatureShowcase() {
 
             {/* CTA */}
             <div className="relative z-10 mt-12 md:mt-20 flex justify-center">
-                <button className="px-6 md:px-8 py-2.5 md:py-3 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm md:text-base font-medium shadow-lg hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300">
+                <button 
+                    onClick={() => setOpen(true)}
+                    className="px-6 md:px-8 py-2.5 md:py-3 rounded-xl bg-gradient-to-r from-blue-500 to-cyan-500 text-white text-sm md:text-base font-medium shadow-lg hover:scale-105 hover:shadow-blue-500/30 transition-all duration-300"
+                >
                     Visit Coderz Cafe
                 </button>
             </div>
+
+            {/* Modal */}
+            {open && (
+                <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50">
+                    <div className="bg-white rounded-xl p-6 w-[90%] max-w-md text-center shadow-xl">
+                        
+                        <h3 className="text-lg font-semibold text-gray-800">
+                            Coderz Cafe will be live soon
+                        </h3>
+                        
+                        <p className="text-sm text-gray-500 mt-2">
+                            Thanks for your patience.
+                        </p>
+
+                        <button
+                            onClick={() => setOpen(false)}
+                            className="mt-4 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                        >
+                            Close
+                        </button>
+                    </div>
+                </div>
+            )}
 
         </section>
     );

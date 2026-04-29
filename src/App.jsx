@@ -20,6 +20,7 @@ import EventsPage from "./component/Foot/EventsPage.jsx";
 import AdminAddEvent from "./component/Admin/AdminAddEvent.jsx";
 import ContactUs from "./component/Foot/ContactUs.jsx";
 import AdminNotice from "./component/Admin/AdminNotice.jsx";
+import SmartSchoolForm from "./component/SmartSchool/SmartSchoolForm.jsx";
 
 
 
@@ -55,6 +56,7 @@ function App() {
         <Route path="/book-visit" element={<BookVisit />} />
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/why-us" element={<WhyUs />} />
+        <Route path="/apply" element={<SmartSchoolForm/>}/>
 
         {/* Footter section page */}
         <Route path="/privacy" element={<PrivacyPolicy/>}/>

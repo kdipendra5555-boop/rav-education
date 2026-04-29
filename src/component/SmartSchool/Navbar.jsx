@@ -26,6 +26,17 @@ export default function Navbar() {
               }`
             }
           >
+            RAV
+          </NavLink>
+
+           <NavLink
+            to="/smart-school"
+            className={({ isActive }) =>
+              `transition ${
+                isActive ? "text-white" : "text-gray-400 hover:text-white"
+              }`
+            }
+          >
             Home
           </NavLink>
 
@@ -88,6 +99,14 @@ export default function Navbar() {
 
           <NavLink
             to="/"
+            onClick={() => setOpen(false)}
+            className="block text-gray-300 hover:text-white transition"
+          >
+            RAV
+          </NavLink>
+
+          <NavLink
+            to="/smart-school"
             onClick={() => setOpen(false)}
             className="block text-gray-300 hover:text-white transition"
           >
