@@ -10,10 +10,10 @@ export default function UltraForm() {
     const [openModal, setOpenModal] = useState(false);
 
     return (
-        <div className="min-h-screen flex bg-gray-50">
+         <div className="min-h-screen flex flex-col md:flex-row bg-gray-50">
 
             {/* 🔷 LEFT SIDE */}
-            <div className="hidden md:flex w-1/2 bg-gradient-to-br from-[#1e3a8a] to-[#2563eb] text-white flex-col justify-center px-16 relative overflow-hidden">
+           <div className="flex w-full md:w-1/2 bg-gradient-to-br from-[#1e3a8a] to-[#2563eb] text-white flex-col justify-center px-6 md:px-16 relative overflow-hidden">
 
                 {/* 🔥 SOFT GLOW BACKGROUND */}
                 <div className="absolute w-[400px] h-[400px] bg-white/10 rounded-full blur-[120px] top-10 left-10" />
