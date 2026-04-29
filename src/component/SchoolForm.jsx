@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import Navbar from "./Navbar";
 
 export default function UltraForm() {
 
@@ -11,6 +12,7 @@ export default function UltraForm() {
 
     return (
          <div className="min-h-screen flex flex-col md:flex-row bg-gray-50">
+            <Navbar/>
 
             {/* 🔷 LEFT SIDE */}
            <div className="flex w-full md:w-1/2 bg-gradient-to-br from-[#1e3a8a] to-[#2563eb] text-white flex-col justify-center px-6 md:px-16 relative overflow-hidden">
@@ -111,9 +113,9 @@ end of pre registration notice */}
             </div>
 
             {/* 🔷 RIGHT SIDE (FIXED) */}
-            <div className="w-full md:w-1/2 h-screen flex flex-col">
+           <div className="w-full md:w-1/2 flex flex-col">
 
-                <div className="flex-1 overflow-y-auto px-6 py-10">
+                <div className="px-6 py-10">
 
                     {/* HEADER */}
                     <h1 className="text-2xl font-semibold text-gray-800 mb-6">
