@@ -46,7 +46,7 @@ export default function Footer() {
 
             {/* YouTube */}
             <a
-              href="https://www.youtube.com/"
+              href="http://www.youtube.com/@RamanArnavaVidyalaya"
               target="_blank"
               rel="noopener noreferrer"
             >
