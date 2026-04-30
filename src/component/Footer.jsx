@@ -15,7 +15,7 @@ export default function Footer() {
           whileInView={{ opacity: 1, y: 0 }}
         >
           <div className="flex items-center gap-3 mb-5">
-            
+
             <div>
               <h2 className="font-semibold text-xl">
                 Raman Arnava Vidyalaya
@@ -27,15 +27,41 @@ export default function Footer() {
           </div>
 
           <p className="text-sm text-blue-200 leading-relaxed mb-5">
-            Building future-ready students with modern education 
+            Building future-ready students with modern education
             and strong values.
           </p>
 
           {/* SOCIAL */}
+
           <div className="flex gap-4 text-lg">
-            <FaInstagram className="hover:text-pink-400 cursor-pointer transition" />
-            <FaYoutube className="hover:text-red-500 cursor-pointer transition" />
-            <FaFacebook className="hover:text-blue-300 cursor-pointer transition" />
+
+            {/* Instagram */}
+            <a
+              href="https://www.instagram.com/rav_education/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaInstagram className="hover:text-pink-400 cursor-pointer transition" />
+            </a>
+
+            {/* YouTube */}
+            <a
+              href="https://www.youtube.com/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaYoutube className="hover:text-red-500 cursor-pointer transition" />
+            </a>
+
+            {/* Facebook */}
+            <a
+              href="https://www.facebook.com/profile.php?id=61589159485496"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <FaFacebook className="hover:text-blue-300 cursor-pointer transition" />
+            </a>
+
           </div>
         </motion.div>
 
@@ -93,17 +119,17 @@ export default function Footer() {
 
       {/* 🔷 BOTTOM */}
       <div className="max-w-7xl mx-auto mt-16 pt-6 border-t border-blue-700 flex flex-col md:flex-row items-center justify-between gap-4">
-        
+
         <p className="text-sm text-blue-300 text-center md:text-left">
           © {new Date().getFullYear()} Raman Arnava Vidyalaya. All rights reserved.
         </p>
 
-       <Link
-  to="/pay"
-  className="bg-white text-blue-700 px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-100 transition shadow inline-block"
->
-  Donate Now
-</Link>
+        <Link
+          to="/pay"
+          className="bg-white text-blue-700 px-6 py-2 rounded-lg text-sm font-medium hover:bg-blue-100 transition shadow inline-block"
+        >
+          Donate Now
+        </Link>
       </div>
     </footer>
   );
