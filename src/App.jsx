@@ -21,6 +21,8 @@ import AdminAddEvent from "./component/Admin/AdminAddEvent.jsx";
 import ContactUs from "./component/Foot/ContactUs.jsx";
 import AdminNotice from "./component/Admin/AdminNotice.jsx";
 import SmartSchoolForm from "./component/SmartSchool/SmartSchoolForm.jsx";
+import CareerHome from "./pages/CareerHome.jsx";
+import Jobs from "./component/career/Jobs.jsx";
 
 
 
@@ -57,6 +59,10 @@ function App() {
         <Route path="/how-it-works" element={<HowItWorks />} />
         <Route path="/why-us" element={<WhyUs />} />
         <Route path="/apply" element={<SmartSchoolForm/>}/>
+
+        {/* Career Page Section */}
+        <Route path="/careers" element={<CareerHome/>}/>
+        <Route path="/careers-job" element={<Jobs/>}/>
 
         {/* Footter section page */}
         <Route path="/privacy" element={<PrivacyPolicy/>}/>

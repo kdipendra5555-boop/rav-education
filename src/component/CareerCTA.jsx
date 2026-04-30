@@ -26,7 +26,7 @@ export default function CareerCTA() {
           <div
             className="hidden sm:block absolute inset-0 bg-no-repeat bg-left md:bg-center"
             style={{
-              backgroundImage: "url('/images/career-bg.png')",
+              backgroundImage: "url('/images/phone-bg.png')",
               backgroundSize: "contain",
             }}
           ></div>
