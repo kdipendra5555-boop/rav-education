@@ -1,10 +1,10 @@
 export default function CareerHero() {
   return (
-    <section className="relative overflow-hidden bg-[#f8fafc]">
+    <section className="relative overflow-hidden bg-gradient-to-br from-blue-50 via-white to-green-50">
 
-      {/* LIGHT GRADIENT */}
-      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-100 rounded-full opacity-40" />
-      <div className="absolute bottom-0 right-0 w-72 h-72 bg-green-100 rounded-full opacity-40" />
+      {/* LIGHT GRADIENT (BEHIND CONTENT) */}
+      <div className="absolute top-0 left-0 w-72 h-72 bg-blue-100 rounded-full opacity-40 -z-10" />
+      <div className="absolute bottom-0 right-0 w-72 h-72 bg-green-100 rounded-full opacity-40 -z-10" />
 
       {/* DOT GRID */}
       <div className="hidden md:grid absolute top-20 right-10 grid-cols-4 gap-3 opacity-30">
@@ -45,7 +45,7 @@ export default function CareerHero() {
           <img
             src="/images/career-illustration.png"
             alt="Career Illustration"
-            className="w-[320px] sm:w-[420px] md:w-[500px] lg:w-[580px] h-auto object-contain"
+            className="w-[360px] sm:w-[480px] md:w-[600px] lg:w-[700px] h-auto object-contain"
           />
         </div>
 

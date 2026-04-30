@@ -1,12 +1,13 @@
 import { Link } from "react-router-dom";
+import ShapeSection from "./ShapeSection";
 
 export default function CareerPoint() {
     return (
-        <section className="relative bg-[#f8fafc] py-24 px-4 overflow-hidden">
+        <section className="relative bg-gradient-to-br from-blue-50 via-white to-green-50 py-24 px-4 overflow-hidden">
 
-            {/* BACKGROUND SHAPES */}
-            <div className="absolute top-0 left-0 w-72 h-72 bg-blue-100 rounded-full opacity-40" />
-            <div className="absolute bottom-0 right-0 w-72 h-72 bg-green-100 rounded-full opacity-40" />
+            {/* BACKGROUND SHAPES (BEHIND) */}
+            <div className="absolute top-0 left-0 w-72 h-72 bg-blue-100 rounded-full opacity-40 -z-10" />
+            <div className="absolute bottom-0 right-0 w-72 h-72 bg-green-100 rounded-full opacity-40 -z-10" />
 
             <div className="max-w-6xl mx-auto grid md:grid-cols-2 items-center gap-10">
 
@@ -48,9 +49,16 @@ export default function CareerPoint() {
                         className="w-full md:w-[120%] lg:w-[140%] max-w-none h-auto object-contain"
                     />
                 </div>
+                
 
             </div>
 
+
+            <ShapeSection/>
+
         </section>
+        
+
+        
     );
 }
