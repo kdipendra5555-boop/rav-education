@@ -12,7 +12,7 @@ export default function UltraForm() {
 
     return (
          <div className="min-h-screen flex flex-col md:flex-row bg-gray-50">
-            <Navbar/>
+           
 
             {/* 🔷 LEFT SIDE */}
            <div className="flex w-full md:w-1/2 bg-gradient-to-br from-[#1e3a8a] to-[#2563eb] text-white flex-col justify-center px-6 md:px-16 relative overflow-hidden">

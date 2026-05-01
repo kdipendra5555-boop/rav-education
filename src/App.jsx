@@ -26,6 +26,7 @@ import Jobs from "./component/career/Jobs.jsx";
 
 
 
+
 function ScrollToTop() {
   const { pathname } = useLocation();
 
@@ -63,6 +64,7 @@ function App() {
         {/* Career Page Section */}
         <Route path="/careers" element={<CareerHome/>}/>
         <Route path="/careers-job" element={<Jobs/>}/>
+       
 
         {/* Footter section page */}
         <Route path="/privacy" element={<PrivacyPolicy/>}/>

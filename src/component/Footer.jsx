@@ -76,6 +76,7 @@ export default function Footer() {
             <li><Link to="/smart-school" className="hover:text-white transition">Smart School</Link></li>
             <li><Link to="/admission" className="hover:text-white transition">Admission</Link></li>
             <li><Link to="/contact" className="hover:text-white transition">Contact</Link></li>
+            <li><Link to="/careers-job" className="hover:text-white transition">Career</Link></li>
           </ul>
         </motion.div>
 

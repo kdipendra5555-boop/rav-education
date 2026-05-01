@@ -1,6 +1,5 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import logo from "../assets/logo.jpg";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -16,22 +15,30 @@ export default function Navbar() {
 
         {/* Logo */}
         <Link to="/" className="flex items-center">
+          
+          {/* Desktop Logo */}
           <img
-            src={logo}
+            src="/images/logo.jpg"
             alt="Raman Arnava Vidyalaya Logo"
-            className="h-14 md:h-16 w-auto object-contain"
+            className="hidden md:block h-14 md:h-16 w-auto object-contain"
           />
+
+          {/* Mobile Logo */}
+          <img
+            src="/images/raman_logo.png"
+            alt="Raman Arnava Vidyalaya Logo"
+            className="block md:hidden h-12 w-auto object-contain"
+          />
+
         </Link>
 
         {/* Desktop Menu */}
         <nav className="hidden md:flex items-center gap-10">
 
-          {/* CAREERS */}
           <NavLink to="/careers" className={navItemClass}>
             Careers
           </NavLink>
 
-          {/* SMART SCHOOL */}
           <NavLink
             to="/smart-school"
             className={({ isActive }) =>
@@ -43,7 +50,6 @@ export default function Navbar() {
             Smart School
           </NavLink>
 
-          {/* DONATE */}
           <NavLink
             to="/pay"
             className="ml-3 px-6 py-2.5 rounded-lg bg-blue-600 text-white text-base font-medium hover:bg-blue-700 transition shadow-sm"
@@ -79,7 +85,6 @@ export default function Navbar() {
         <div className="md:hidden bg-white border-t border-gray-100 shadow-sm">
           <nav className="flex flex-col px-6 py-6 gap-5 text-center text-base">
 
-            {/* CAREERS */}
             <NavLink
               to="/careers"
               onClick={() => setOpen(false)}
@@ -88,7 +93,6 @@ export default function Navbar() {
               Careers
             </NavLink>
 
-            {/* SMART SCHOOL */}
             <NavLink
               to="/smart-school"
               onClick={() => setOpen(false)}
@@ -97,7 +101,6 @@ export default function Navbar() {
               Smart School
             </NavLink>
 
-            {/* DONATE */}
             <NavLink
               to="/pay"
               onClick={() => setOpen(false)}
