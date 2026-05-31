@@ -1,4 +1,3 @@
-
 import Navbar from "../Navbar";
 
 export default function DotPrintSponsorSection() {
@@ -30,139 +29,120 @@ export default function DotPrintSponsorSection() {
   ];
 
   return (
-    
-    <section className="relative overflow-hidden bg-[#f8fafc] pt-36 pb-24">
-        {/* Fixed Navbar */}
-<div className="fixed left-0 top-0 z-50 w-full">
-  <Navbar />
-</div>
-      {/* Background Effects */}
-      <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-blue-100/50 blur-3xl" />
-      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-emerald-100/40 blur-3xl" />
+    <section className="relative min-h-screen overflow-hidden bg-black">
+      {/* Navbar */}
+      <div className="fixed left-0 top-0 z-50 w-full">
+        <Navbar />
+      </div>
 
-      <div className="relative z-10 mx-auto max-w-7xl px-6 lg:px-8">
-        {/* Header */}
-        <div className="mx-auto max-w-3xl text-center">
-          <div className="inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-5 py-2 text-sm text-slate-600 shadow-sm">
-            <div className="h-2 w-2 rounded-full bg-emerald-500" />
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="https://images.unsplash.com/photo-1497366754035-f200968a6e72?q=80&w=2070&auto=format&fit=crop"
+          alt="DotPrint"
+          className="h-full w-full object-cover"
+        />
+
+        {/* Overlays */}
+        <div className="absolute inset-0 bg-black/65" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black via-black/50 to-black/20" />
+      </div>
+
+      {/* Decorative Glow */}
+      <div className="absolute left-0 top-0 h-96 w-96 rounded-full bg-blue-500/10 blur-3xl" />
+      <div className="absolute bottom-0 right-0 h-96 w-96 rounded-full bg-emerald-500/10 blur-3xl" />
+
+      {/* Main */}
+      <div className="relative z-10 mx-auto max-w-7xl px-6 pt-36 pb-20 lg:px-8">
+        {/* Hero */}
+        <div className="max-w-4xl">
+          <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/10 px-5 py-2 text-sm text-white backdrop-blur-xl">
+            <div className="h-2 w-2 rounded-full bg-emerald-400" />
             Official Creative & Printing Sponsor
           </div>
 
-          <h2 className="mt-8 text-4xl tracking-tight text-slate-900 md:text-6xl">
-            Powered by DotPrint
-          </h2>
+          <h1 className="mt-8 text-5xl font-semibold leading-[0.95] tracking-tight text-white md:text-8xl">
+            DotPrint
+          </h1>
 
-          <p className="mx-auto mt-6 max-w-2xl text-lg leading-9 text-slate-600">
-            DotPrint supports our institution by managing the complete
-            printing, branding, and creative ecosystem — helping us maintain a
-            modern and professional educational identity across every platform.
+          <p className="mt-8 max-w-2xl text-lg leading-9 text-slate-300">
+            Managing the complete creative, printing, branding, and visual
+            communication ecosystem of our institution with premium quality
+            execution and modern design systems.
           </p>
         </div>
 
-        {/* Main Layout */}
-        <div className="mt-20 grid gap-8 lg:grid-cols-[1.1fr_0.9fr]">
-          {/* Left Side */}
-          <div className="relative overflow-hidden rounded-[36px] border border-slate-200 bg-white p-8 shadow-xl md:p-12">
-            {/* Glow */}
-            <div className="absolute -top-24 right-0 h-64 w-64 rounded-full bg-blue-100/40 blur-3xl" />
+        {/* Main Grid */}
+        <div className="mt-20 grid gap-8 lg:grid-cols-[320px_1fr]">
+          {/* Left Sticky Card */}
+          <div className="h-fit rounded-[36px] border border-white/10 bg-white/10 p-8 backdrop-blur-2xl lg:sticky lg:top-32">
+            <p className="text-sm uppercase tracking-[0.3em] text-slate-400">
+              About Partner
+            </p>
 
-            <div className="relative z-10">
-              {/* Top */}
-              <div className="flex items-start justify-between gap-6">
-                <div>
-                  <p className="text-sm uppercase tracking-[0.25em] text-slate-400">
-                    Sponsor Partner
-                  </p>
+            <div className="mt-10">
+              <h2 className="text-5xl font-semibold text-white">100%</h2>
 
-                  <h3 className="mt-4 text-5xl tracking-tight text-slate-900">
-                    DotPrint
-                  </h3>
-
-                  <p className="mt-5 max-w-xl text-base leading-8 text-slate-600">
-                    Managing all major print, branding, and creative operations
-                    for our institution with premium quality and modern visual
-                    communication.
-                  </p>
-                </div>
-
-                <div className="flex h-20 w-20 items-center justify-center rounded-3xl border border-slate-200 bg-slate-50 text-4xl shadow-sm">
-                  🖨️
-                </div>
-              </div>
-
-              {/* Divider */}
-              <div className="mt-10 h-px w-full bg-gradient-to-r from-slate-300 via-slate-200 to-transparent" />
-
-              {/* Features */}
-              <div className="mt-10 space-y-5">
-                {[
-                  {
-                    title: "Complete Branding Support",
-                    desc: "Banners, certificates, promotional materials, and institutional identity assets.",
-                  },
-                  {
-                    title: "Professional Printing",
-                    desc: "Educational printing solutions for all academic and institutional needs.",
-                  },
-                  {
-                    title: "Modern Creative Design",
-                    desc: "Visual communication and campaign creatives for both online and offline platforms.",
-                  },
-                ].map((item, index) => (
-                  <div
-                    key={index}
-                    className="group rounded-3xl border border-slate-100 bg-slate-50/80 p-5 transition-all duration-300 hover:border-slate-200 hover:bg-white hover:shadow-lg"
-                  >
-                    <div className="flex gap-4">
-                      <div className="mt-2 h-3 w-3 rounded-full bg-gradient-to-r from-blue-500 to-emerald-500" />
-
-                      <div>
-                        <h4 className="text-lg font-medium text-slate-900">
-                          {item.title}
-                        </h4>
-
-                        <p className="mt-2 text-sm leading-7 text-slate-600">
-                          {item.desc}
-                        </p>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </div>
-
-              {/* Bottom */}
-              <div className="mt-10 flex flex-wrap items-center gap-5">
-               
-
-                <div className="rounded-2xl border border-slate-200 bg-slate-50 px-5 py-4">
-                  <p className="text-sm text-slate-500">
-                    Trusted creative & print partner
-                  </p>
-                </div>
-              </div>
+              <p className="mt-4 text-sm leading-8 text-slate-300">
+                Complete support for institutional printing, educational
+                materials, promotional campaigns, and branding systems.
+              </p>
             </div>
+
+            <div className="mt-10 h-px w-full bg-white/10" />
+
+            <div className="mt-10">
+              <h3 className="text-4xl font-semibold text-white">Full</h3>
+
+              <p className="mt-4 text-sm leading-8 text-slate-300">
+                Creative direction for campaigns, event visuals, promotional
+                graphics, and modern communication materials.
+              </p>
+            </div>
+
+            <button className="mt-12 w-full rounded-2xl bg-white px-6 py-4 text-sm font-medium text-slate-900 transition duration-300 hover:bg-slate-100 hover:shadow-2xl">
+              Explore Partnership
+            </button>
           </div>
 
-          {/* Right Side */}
-          <div className="grid gap-6 sm:grid-cols-2">
+          {/* Right Cards */}
+          <div className="grid auto-rows-[280px] gap-6 md:grid-cols-2">
             {services.map((service, index) => (
               <div
                 key={index}
-                className="group rounded-[32px] border border-slate-200 bg-white p-8 shadow-sm transition-all duration-500 hover:-translate-y-2 hover:shadow-2xl"
+                className={`group relative overflow-hidden rounded-[36px] border border-white/10 bg-white/10 p-8 backdrop-blur-2xl transition-all duration-500 hover:-translate-y-2 hover:bg-white/15 hover:shadow-2xl ${
+                  index === 0 ? "md:col-span-2" : ""
+                }`}
               >
-                <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-slate-50 text-3xl shadow-sm transition duration-300 group-hover:scale-110">
-                  {service.icon}
+                {/* Glow */}
+                <div className="absolute -right-10 -top-10 h-40 w-40 rounded-full bg-white/5 blur-3xl" />
+
+                <div className="relative z-10 flex h-full flex-col justify-between">
+                  {/* Top */}
+                  <div>
+                    <div className="flex h-16 w-16 items-center justify-center rounded-2xl bg-white/10 text-3xl shadow-lg">
+                      {service.icon}
+                    </div>
+
+                    <h3 className="mt-7 text-3xl font-semibold tracking-tight text-white">
+                      {service.title}
+                    </h3>
+
+                    <p className="mt-4 max-w-xl text-sm leading-8 text-slate-300">
+                      {service.description}
+                    </p>
+                  </div>
+
+                  {/* Bottom */}
+                  <div className="mt-8 flex items-center justify-between">
+                    <div className="h-px w-full max-w-[120px] bg-white/10" />
+
+                    <div className="flex items-center gap-2 text-sm font-medium text-blue-300 transition duration-300 group-hover:gap-4">
+                      <span>Learn More</span>
+                      <span>→</span>
+                    </div>
+                  </div>
                 </div>
-
-                <h4 className="mt-7 text-2xl tracking-tight text-slate-900">
-                  {service.title}
-                </h4>
-
-                <p className="mt-4 text-sm leading-8 text-slate-600">
-                  {service.description}
-                </p>
-
-                
               </div>
             ))}
           </div>
