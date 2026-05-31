@@ -1,0 +1,32 @@
+const reasons = [
+  {
+    icon: Zap,
+    title: "Blazing Fast System",
+    desc: "Our smart school infrastructure is engineered for ultra-fast performance, ensuring instant response, zero lag, and seamless classroom operations across all environments.",
+  },
+  {
+    icon: Server,
+    title: "Fully Local Server",
+    desc: "Runs entirely on a secure local server, eliminating internet dependency while ensuring maximum reliability, privacy, and uninterrupted access.",
+  },
+  {
+    icon: Brain,
+    title: "AI Powered Learning",
+    desc: "Students experience next-generation education with integrated AI tools that enhance creativity, coding ability, and real-world problem solving.",
+  },
+  {
+    icon: Shield,
+    title: "Secure & Private",
+    desc: "Advanced security systems protect all data with complete control, ensuring a safe and private digital learning environment.",
+  },
+  {
+    icon: Users,
+    title: "Teacher Friendly",
+    desc: "Designed with simplicity and power, enabling teachers to manage classrooms, monitor progress, and deliver content effortlessly.",
+  },
+  {
+    icon: Sparkles,
+    title: "Modern Experience",
+    desc: "A visually rich and interactive interface designed to make learning immersive, engaging, and future-ready.",
+  },
+];
