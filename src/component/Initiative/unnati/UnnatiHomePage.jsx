@@ -4,6 +4,7 @@ import UnnatiSection from "./UnnatiSection";
 import WhyUnnati from "./WhyUnnati";
 import Navbar from "../../Navbar";
 import UnnatiQuote from "./UnnatiQuote";
+import JoinAsTeacher from "./JoinAsTeacher";
 
 export default function UnnatiHomePage() {
   return (
@@ -11,6 +12,7 @@ export default function UnnatiHomePage() {
     <Navbar/>
     <UnnatiSection/>
     <WhyUnnati/>
+    <JoinAsTeacher/>
     <UnnatiQuote/>
     </>
   );

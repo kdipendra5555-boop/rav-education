@@ -66,7 +66,7 @@ export default function UnnatiSection() {
               to="/unnati/student/enroll"
               className="group mt-8 md:mt-10 bg-[#081936] text-white px-6 md:px-8 py-4 md:py-5 rounded-xl shadow-xl flex items-center gap-3 md:gap-4 uppercase tracking-[2px] md:tracking-[3px] hover:scale-105 transition-all duration-300 w-fit text-sm"
             >
-              Discover Unnati
+             Enroll Here
               <ArrowRight
                 size={18}
                 className="group-hover:translate-x-1 transition"

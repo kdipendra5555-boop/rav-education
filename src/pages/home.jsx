@@ -8,6 +8,7 @@ import NoticeBoard from "../component/NoticeBoard";
 import CareerCTA from "../component/CareerCTA";
 import SponsorsSection from "../component/SponsorsSection";
 import EventSection from "../component/EventSection";
+import OurInitiative from "../component/OurInitiative";
 
 
 
@@ -20,6 +21,7 @@ export default function Home() {
       <EventSection/>
       
       <SmartSchoolSection/>
+      {/* <OurInitiative/> */}
       <SupportOurMission/>
       
       
