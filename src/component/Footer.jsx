@@ -200,10 +200,34 @@ export default function Footer() {
 
             </ul>
           </motion.div>
+
+          <motion.div
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+          >
+            <h3 className="font-semibold mb-5 text-base">
+              Intitiatives
+            </h3>
+
+            <ul className="space-y-3 text-sm text-blue-200">
+
+              <li>
+                <Link
+                  to="/initiatives/unnati/home"
+                  className="hover:text-white transition"
+                >
+                  Unnati
+                </Link>
+              </li>
+
+            </ul>
+          </motion.div>
         </div>
 
+        
+
         {/* NEWSLETTER */}
-        <motion.div
+        {/* <motion.div
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           className="md:pl-4"
@@ -229,7 +253,7 @@ export default function Footer() {
           <p className="text-sm text-blue-200 leading-relaxed">
             📍 Uttar Pradesh
           </p>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* 🔷 BOTTOM */}
@@ -240,11 +264,14 @@ export default function Footer() {
           All rights reserved.
         </p>
 
-        <Link>
-          <p className="text-sm text-blue-200 text-center">
-            @ Run by Raman Arnava Foundation - under registration
-          </p>
-        </Link>
+       <Link
+  to="/raf"
+  className="group"
+>
+  <p className="text-sm text-blue-200 text-center transition-all duration-300 group-hover:text-green-400">
+    @ Run by Raman Arnava Foundation - under registration
+  </p>
+</Link>
 
         <Link
           to="/pay"

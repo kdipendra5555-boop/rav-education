@@ -1,65 +1,35 @@
-import { Info } from "lucide-react";
 import Navbar from "../Navbar";
-
+import JobCard from "./JobCard/JobCard";
 
 export default function Jobs() {
-  const jobs = []; // abhi empty
-
   return (
     <>
-    <Navbar/>
-    <section className="bg-[#f8fafc] py-20 px-4">
-      
-      <div className="max-w-6xl mx-auto">
-        
+      <Navbar />
 
-        {/* HEADING */}
-        <div className="text-center mb-14">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
-            Open Positions
-          </h2>
-          <p className="mt-3 text-gray-500 text-sm">
-            Explore opportunities and grow with us
-          </p>
-        </div>
+      <section className="bg-[#f8fafc] py-20 px-4 min-h-screen">
+        <div className="max-w-6xl mx-auto">
 
-        {/* CONDITION */}
-        {jobs.length === 0 ? (
-
-          /* EMPTY STATE */
-          <div className="bg-white border border-gray-200 rounded-2xl p-10 text-center max-w-2xl mx-auto">
-
-            <div className="flex justify-center mb-4">
-              <div className="w-12 h-12 flex items-center justify-center bg-blue-50 rounded-full">
-                <Info className="w-6 h-6 text-blue-500" />
-              </div>
-            </div>
-
-            <h3 className="text-lg font-semibold text-gray-800">
-              No Open Positions Right Now
-            </h3>
-
-            <p className="mt-3 text-sm text-gray-500 leading-relaxed">
-              We are currently in the development phase and not accepting job applications at the moment.
-              <br />
-              Opportunities will be announced soon — stay connected with us!
+          <div className="text-center mb-14">
+            <h2 className="text-3xl md:text-4xl font-semibold text-gray-900">
+              Open Positions
+            </h2>
+            <p className="mt-3 text-gray-500 text-sm">
+              Explore opportunities and grow with us
             </p>
-
           </div>
 
-        ) : (
+         <div className="max-w-2xl mx-auto px-4">
+  <JobCard
+    title="Tuition Teacher"
+    location="Remote"
+    type="Part Time"
+    applyLink="/teacher-apply/tuition/unnati/rural/students"
+    description="We are looking for a dedicated tuition teacher to teach students from Class 1 to 5 and help them build strong academic foundations."
+  />
+</div>
 
-          /* JOB LIST (future use) */
-          <div className="space-y-6">
-            {jobs.map((job, i) => (
-              <div key={i}>Job Card</div>
-            ))}
-          </div>
-
-        )}
-
-      </div>
-    </section>
+        </div>
+      </section>
     </>
   );
 }

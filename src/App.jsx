@@ -29,6 +29,9 @@ import AdmissionProcess from "./pages/AdmissionProcess.jsx";
 import WelcomeKit from "./pages/WelcomeKit.jsx";
 import RegistrationForm from "./component/Forms/RegistrationForm.jsx";
 import DotPrintSponsorSection from "./component/sponsors/DotPrintSponsorSection.jsx";
+import UnnatiHome from "./component/Initiative/unnati/UnnatiHomePage.jsx";
+import UnnatiForm from "./component/Initiative/unnati/UnnatiForm.jsx";
+import TeacherApply from "./component/career/JobCard/TeacherApply.jsx";
 
 
 
@@ -90,6 +93,13 @@ function App() {
 
         {/* Sponser  */}
         <Route path="/printmedia" element={<DotPrintSponsorSection/>}/>
+
+        {/* Initiatives */}
+        <Route path="/initiatives/unnati/home" element={<UnnatiHome/>}/>
+        <Route path="/unnati/student/enroll" element={<UnnatiForm/>}/>
+
+        {/* Jobs */}
+        <Route path="/teacher-apply/tuition/unnati/rural/students" element={<TeacherApply/>}/>
 
 
       </Routes>
