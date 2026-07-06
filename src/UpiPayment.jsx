@@ -2,7 +2,7 @@ import { useState } from "react";
 import { QRCode } from "react-qr-code";
 import Navbar from "./component/Navbar";
 
-const UPI_ID = "ramanarnavavidyalaya@axl";
+const UPI_ID = "";
 const PAYEE_NAME = "Raman Arnava Vidyalaya";
 
 export default function UpiPayment() {
