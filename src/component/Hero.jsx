@@ -48,11 +48,6 @@ export default function Hero() {
             >
               ORBIS
 
-              to="/pay"
-              className="border border-white px-6 py-3 rounded-xl font-semibold hover:bg-white hover:text-blue-700 transition"
-            
-              Donate
-
             </Link>
           </div>
         </div>
