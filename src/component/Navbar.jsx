@@ -1,0 +1,216 @@
+import { useState } from "react";
+import { Link, NavLink } from "react-router-dom";
+
+export default function Navbar() {
+  const [open, setOpen] = useState(false);
+
+  const navItemClass = ({ isActive }) =>
+    isActive
+      ? "text-blue-700 font-semibold text-base"
+      : "text-gray-600 hover:text-blue-700 transition text-base";
+
+  return (
+    <header className="bg-white/90 backdrop-blur-md shadow-sm sticky top-0 z-50 border-b border-gray-100">
+      <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
+
+        {/* Logo */}
+        <Link to="/" className="flex items-center">
+
+          {/* Desktop Logo */}
+          <img
+            src="/images/logo.jpg"
+            alt="Raman Arnava Vidyalaya Logo"
+            className="hidden md:block h-14 md:h-16 w-auto object-contain"
+          />
+
+          {/* Mobile Logo */}
+          <img
+            src="/images/raman_logo.png"
+            alt="Raman Arnava Vidyalaya Logo"
+            className="block md:hidden h-12 w-auto object-contain"
+          />
+
+        </Link>
+
+        {/* Desktop Menu */}
+        <nav className="hidden md:flex items-center gap-6">
+
+          <NavLink
+            to="/"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-700 font-semibold text-base"
+                : "text-gray-600 hover:text-blue-600 transition text-base"
+            }
+          >
+            Home
+          </NavLink>
+
+
+          
+          <NavLink
+            to="/events"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-700 font-semibold text-base"
+                : "text-gray-600 hover:text-blue-600 transition text-base"
+            }
+          >
+            Events
+          </NavLink>
+
+          <NavLink
+            to="/feature-career"
+            className={({ isActive }) =>
+              isActive
+                ? "text-blue-700 font-semibold text-base"
+                : "text-gray-600 hover:text-blue-600 transition text-base"
+            }
+          >
+            Features
+          </NavLink>
+
+          <NavLink to="/careers" className={navItemClass}>
+            Careers
+          </NavLink>
+
+          <NavLink
+            to="/smart-school"
+            className={({ isActive }) =>
+              isActive
+                ? "text-green-700 font-semibold text-base"
+                : "text-gray-600 hover:text-green-600 transition text-base"
+            }
+          >
+            Smart School
+          </NavLink>
+
+
+          <NavLink
+            to="/joinmission"
+            className={({ isActive }) =>
+              isActive
+                ? "text-green-700 font-semibold text-base"
+                : "text-gray-600 hover:text-green-600 transition text-base"
+            }
+          >
+            Join Mission
+          </NavLink>
+
+          <NavLink
+            to="/admission"
+            className={({ isActive }) =>
+              isActive
+                ? "text-green-600 font-semibold text-base"
+                : "text-gray-600 hover:text-green-600 transition text-base"
+            }
+          >
+            Admission
+          </NavLink>
+
+          <NavLink
+            to="/pay"
+            className="ml-3 px-6 py-2.5 rounded-lg bg-blue-600 text-white text-base font-medium hover:bg-blue-700 transition shadow-sm"
+          >
+            Donate
+          </NavLink>
+
+        </nav>
+
+        {/* Mobile Button */}
+        <button
+          onClick={() => setOpen(!open)}
+          className="md:hidden text-gray-700"
+        >
+          <svg
+            className="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            viewBox="0 0 24 24"
+          >
+            {open ? (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            ) : (
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            )}
+          </svg>
+        </button>
+      </div>
+
+      {/* Mobile Menu */}
+      {open && (
+        <div className="md:hidden bg-white border-t border-gray-100 shadow-sm">
+          <nav className="flex flex-col px-6 py-6 gap-5 text-center text-base">
+
+
+            <NavLink
+              to="/"
+              onClick={() => setOpen(false)}
+              className="text-gray-700 font-medium"
+            >
+              Home
+            </NavLink>
+
+            <NavLink
+              to="/events"
+              onClick={() => setOpen(false)}
+              className="text-gray-700 font-medium"
+            >
+              Events
+            </NavLink>
+
+            <NavLink
+              to="/feature-career"
+              onClick={() => setOpen(false)}
+              className="text-gray-700 font-medium"
+            >
+              Feature
+            </NavLink>
+
+            <NavLink
+              to="/careers"
+              onClick={() => setOpen(false)}
+              className="text-gray-700 font-medium"
+            >
+              Careers
+            </NavLink>
+
+            <NavLink
+              to="/smart-school"
+              onClick={() => setOpen(false)}
+              className="text-green-600 font-medium"
+            >
+              Smart School
+            </NavLink>
+
+            <NavLink
+              to="/joinmission"
+              onClick={() => setOpen(false)}
+              className="text-green-600 font-medium"
+            >
+              Join Mission
+            </NavLink>
+
+            <NavLink
+              to="/admission"
+              onClick={() => setOpen(false)}
+              className="text-blue-600 font-medium"
+            >
+              Admission
+            </NavLink>
+
+            <NavLink
+              to="/pay"
+              onClick={() => setOpen(false)}
+              className="mt-2 bg-blue-600 text-white px-5 py-3 rounded-lg font-medium"
+            >
+              Donate
+            </NavLink>
+
+          </nav>
+        </div>
+      )}
+    </header>
+  );
+}
