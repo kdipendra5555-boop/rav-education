@@ -15,7 +15,6 @@ import OurInitiative from "../component/OurInitiative";
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-100 to-slate-200">
-      <Navbar/>
       <Hero/>
       <NoticeBoard/>
       <EventSection/>
