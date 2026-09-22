@@ -110,32 +110,34 @@ export default function RedHero() {
         </div>
       </div>
 
-      {/* ================= IMAGE ================= */}
-      <div
-        className="
-          absolute
-          bottom-0
-          left-0
-          w-full
-          overflow-hidden
-          border-t
-          border-white/10
-        "
-      >
-        <img
-          src="/images/redhero.png"
-          alt="RedHero Initiative"
-          className="
-            block
-            h-[260px]
-            w-full
-            object-cover
-            object-center
-            sm:h-[350px]
-            lg:h-[390px]
-          "
-        />
-      </div>
+     {/* ================= IMAGE ================= */}
+<div
+  className="
+    absolute
+    bottom-0
+    left-1/2
+    w-[94%]
+    -translate-x-1/2
+    overflow-hidden
+    rounded-t-2xl
+    border
+    border-white/10
+  "
+>
+  <img
+    src="/images/redhero.png"
+    alt="RedHero Initiative"
+    className="
+      block
+      h-[260px]
+      w-full
+      object-cover
+      object-center
+      sm:h-[350px]
+      lg:h-[390px]
+    "
+  />
+</div>
 
     </section>
   );
